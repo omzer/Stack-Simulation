@@ -8,4 +8,4 @@
 
 
 ## What is this
-##### This program was made during my Data Structure class in the university (2015), the special thing about it, that it was all written completely in code using java swing, no drag and drop involved.
+##### This program was made during my Data Structure class in the university (2015), the special thing about it, that it was written completely in code using java swing, no drag and drop involved.
