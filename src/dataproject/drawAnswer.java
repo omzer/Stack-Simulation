@@ -12,7 +12,7 @@ public class drawAnswer implements Runnable {
 
     @Override
     public void run() {
-        
+
         b = x.txt.getText();
         x.stack2.add(x.sc);
         x.shm.setLocation(5, 0);
@@ -43,10 +43,12 @@ public class drawAnswer implements Runnable {
                 x.stack2.setText(x.stack2.getText() + "   poping " + val2 + " form stack\n");
                 repStack();
                 delay(2000);
-                x.stack2.setText(x.stack2.getText() + "   Finding " + val1 + a + val2 + " = " + res(val2, val1, a) + " \n");
+                x.stack2.setText(
+                        x.stack2.getText() + "   Finding " + val1 + a + val2 + " = " + res(val2, val1, a) + " \n");
                 repStack();
                 delay(2000);
-                x.stack2.setText(x.stack2.getText() + "   RePush the result " + res(val2, val1, a) + " to the stack \n");
+                x.stack2.setText(
+                        x.stack2.getText() + "   RePush the result " + res(val2, val1, a) + " to the stack \n");
                 st.push(res(val2, val1, a));
                 repStack();
                 delay(2000);

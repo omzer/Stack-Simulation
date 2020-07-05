@@ -64,7 +64,7 @@ public class maniFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    public void addObjects() { 
+    public void addObjects() {
         EEPanel.add(sliderComment);
         EEPanel.add(slider);
         EEPanel.add(sc);
@@ -116,7 +116,7 @@ public class maniFrame extends JFrame {
         sliderComment.setForeground(Color.white);
         slider.setMinimum(100);
         slider.setMaximum(10000);
-        slider.setBackground(new Color(77,79,78));
+        slider.setBackground(new Color(77, 79, 78));
         shm.setVisible(false);
         shm.setIcon(new ImageIcon(getClass().getResource("/images/shm.jpg")));
         comt.setFont(new Font("Arial", 10, 35));
@@ -156,17 +156,17 @@ public class maniFrame extends JFrame {
     public void loadCode() {
         st = null;
         calculate.addActionListener((ActionEvent e) -> {
-            int x =slider.getValue();
+            int x = slider.getValue();
             drawAnswer d = new drawAnswer();
             d.x.hideP();
-            d.x.txt.setText(new myString(txt.getText()).toPostfix());   
-            d.x. slider.setValue(2000);
+            d.x.txt.setText(new myString(txt.getText()).toPostfix());
+            d.x.slider.setValue(2000);
             this.setVisible(false);
             Thread th = new Thread(d);
             th.start();
             exitButton.setVisible(true);
             d.x.slider.setValue(x);
-        
+
         });
 
         exitButton.addActionListener((ActionEvent a) -> {
@@ -232,11 +232,11 @@ public class maniFrame extends JFrame {
         back.addActionListener((ActionEvent booring) -> {
             showP();
         });
-slider.addChangeListener(new ChangeListener() {
+        slider.addChangeListener(new ChangeListener() {
 
             @Override
             public void stateChanged(ChangeEvent e) {
-                sliderComment.setText("Delay  : "+slider.getValue()+" mi sec");
+                sliderComment.setText("Delay  : " + slider.getValue() + " mi sec");
             }
         });
 
